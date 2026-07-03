@@ -1,6 +1,7 @@
 # portfolio-muhmd-azm
 
-portfolio website
+portfolio website built with **Vite + React + Tailwind**.  
+Content is powered by a simple `data/data.json` file.
 
 ## Prerequisites
 
@@ -8,7 +9,18 @@ portfolio website
 node.js: 20.20.2
 ```
 
-## Getting Started
+## Getting Started 🚀
+
+```bash
+npm i
+
+npm run dev
+# http://localhost:5173
+
+npm run build
+
+npm run preview
+```
 
 ---
 
