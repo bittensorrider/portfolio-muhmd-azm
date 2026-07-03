@@ -156,7 +156,7 @@ export default function App() {
 
         <header className="sticky top-4 z-40">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between rounded-2xl border border-subtle bg-[color:var(--bg)]/55 backdrop-blur-xl shadow-md pl-3 pr-2 py-2">
+            <div className="flex items-center justify-between rounded-2xl border border-subtle bg-(--bg)/55 backdrop-blur-xl shadow-md pl-3 pr-2 py-2">
               <a
                 href="#"
                 className="flex items-center gap-2 font-semibold tracking-tight focus-ring rounded"
@@ -180,7 +180,7 @@ export default function App() {
                       href={`#${n.id}`}
                       onClick={() => setActive(n.id)}
                       className={`nav-link relative inline-flex items-center gap-2 rounded-lg px-3 py-1.5 transition focus-ring
-                        ${isActive ? "nav-active" : "text-muted hover:text-[color:var(--accent)]"}
+                        ${isActive ? "nav-active" : "text-muted hover:text-(--accent)"}
                       `}
                       aria-current={isActive ? "page" : undefined}
                     >

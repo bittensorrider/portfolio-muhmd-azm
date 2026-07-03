@@ -125,7 +125,7 @@ export const Loader: React.FC<Props> = ({
     <AnimatePresence>
       <motion.div
         key="loader-shell"
-        className="fixed inset-0 z-[1000] flex items-center justify-center loader-backdrop"
+        className="fixed inset-0 z-1000 flex items-center justify-center loader-backdrop"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -137,7 +137,7 @@ export const Loader: React.FC<Props> = ({
         <div className="hl-scan absolute inset-0" />
 
         <motion.div
-          className="relative w-[min(92vw,760px)] rounded-2xl border border-subtle bg-[color:var(--bg)]/70 backdrop-blur-xl shadow-2xl overflow-hidden"
+          className="relative w-[min(92vw,760px)] rounded-2xl border border-subtle bg-(--bg)/70 backdrop-blur-xl shadow-2xl overflow-hidden"
           initial={{ y: 8, scale: 0.98, opacity: 0 }}
           animate={{ y: 0, scale: 1, opacity: 1 }}
           exit={{ y: 6, scale: 0.985, opacity: 0 }}
@@ -151,22 +151,22 @@ export const Loader: React.FC<Props> = ({
           </div>
 
           <div className="p-4">
-            <div className="hl-terminal rounded-lg border border-subtle bg-[color:var(--bg)]/55 px-3 py-2 font-mono text-sm leading-6 overflow-hidden">
+            <div className="hl-terminal rounded-lg border border-subtle bg-(--bg)/55 px-3 py-2 font-mono text-sm leading-6 overflow-hidden">
               <div className="max-h-[38vh] overflow-hidden">
                 {LINES.slice(0, shownCount).map((l, idx) => (
                   <div key={`log-${idx}`} className="whitespace-pre-wrap">
-                    <span className="text-[color:var(--accent)]">➜</span> {l}
+                    <span className="text-(--accent)">➜</span> {l}
                   </div>
                 ))}
                 <div className="opacity-80">
-                  <span className="text-[color:var(--accent)]">➜</span> initializing…
+                  <span className="text-(--accent)">➜</span> initializing…
                   <span className="ml-1 inline-block animate-pulse">▋</span>
                 </div>
               </div>
 
-              <div className="mt-3 h-2 w-full overflow-hidden rounded bg-[color:var(--bg)]/60 border border-subtle">
+              <div className="mt-3 h-2 w-full overflow-hidden rounded bg-(--bg)/60 border border-subtle">
                 <div
-                  className="h-full bg-gradient-to-r from-[color:var(--accent)] to-[color:var(--accent)]/60 hl-bar"
+                  className="h-full bg-linear-to-r from-(--accent) to-(--accent)/60 hl-bar"
                   style={{
                     width: `${prettyPct}%`,
                     transition: "width .35s ease",

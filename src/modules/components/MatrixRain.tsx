@@ -58,15 +58,16 @@ export const MatrixRain: React.FC = () => {
 
       for (let i = 0; i < columns; i++) {
         const x = i * colWidth;
-        const y = drops[i] * fontSize;
+        const drop = drops[i] ?? 0;
+        const y = drop * fontSize;
 
-        const ch = chars[(Math.random() * 2) | 0];
+        const ch = chars[(Math.random() * chars.length) | 0] ?? "0";
         ctx.fillText(ch, x, y);
 
         if (y > hCss && Math.random() > 0.975) {
           drops[i] = Math.floor(-20 * Math.random());
         } else {
-          drops[i] += 1;
+          drops[i] = drop + 1;
         }
       }
 

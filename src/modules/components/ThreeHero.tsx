@@ -140,6 +140,7 @@ export default function ThreeHero() {
       });
 
       function onResize() {
+        if (!el) return;
         const w = el.clientWidth || 1;
         const h = el.clientHeight || 1;
         renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));

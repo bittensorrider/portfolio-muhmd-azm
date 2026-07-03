@@ -13,7 +13,7 @@ export const ThemeToggle: React.FC = () => {
       aria-label={`Switch to ${to} mode`}
       title={`Switch to ${to} mode`}
       onClick={toggle}
-      className="group relative inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-subtle bg-[color:var(--bg)]/60 backdrop-blur-xl hover:bg-[color:var(--bg)]/70 transition focus-ring"
+      className="group relative inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-subtle bg-(--bg)/60 backdrop-blur-xl hover:bg-(--bg)/70 transition focus-ring"
     >
       <span className="sr-only">Toggle theme</span>
 
@@ -23,7 +23,7 @@ export const ThemeToggle: React.FC = () => {
             <motion.svg
               key="sun"
               viewBox="0 0 24 24"
-              className="h-5 w-5 text-[color:var(--text)] group-hover:text-[color:var(--accent)]"
+              className="h-5 w-5 text-(--text) group-hover:text-(--accent)"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.6"
@@ -42,7 +42,7 @@ export const ThemeToggle: React.FC = () => {
             <motion.svg
               key="moon"
               viewBox="0 0 24 24"
-              className="h-5 w-5 text-[color:var(--text)] group-hover:text-[color:var(--accent)]"
+              className="h-5 w-5 text-(--text) group-hover:text-(--accent)"
               fill="currentColor"
               initial={{ opacity: 0, scale: 0.75, rotate: 90 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
