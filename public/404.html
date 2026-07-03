@@ -2,21 +2,10 @@
 <html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#0D1117" />
-    <meta
-      name="theme-color"
-      content="#ffffff"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta
-      name="theme-color"
-      content="#0D1117"
-      media="(prefers-color-scheme: dark)"
-    />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)" />
     <title>404 — Not Found</title>
     <style>
       :root {
@@ -137,9 +126,7 @@
         -webkit-text-fill-color: transparent;
         background-origin: text;
         color: transparent;
-        filter: drop-shadow(
-          0 0 18px color-mix(in oklch, var(--accent) 25%, transparent)
-        );
+        filter: drop-shadow(0 0 18px color-mix(in oklch, var(--accent) 25%, transparent));
         -webkit-text-stroke: 0.3px rgba(0, 0, 0, 0);
       }
       p {
@@ -148,9 +135,7 @@
         font-size: 15px;
       }
       .mono {
-        font-family:
-          ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
-          monospace;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
       }
 
       .grid {
@@ -315,8 +300,7 @@
     <div class="wrap">
       <div class="card">
         <div class="topbar">
-          <span class="dot r"></span><span class="dot y"></span
-          ><span class="dot g"></span>
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
           <span style="margin-left: 8px">boot@portfolio — zsh</span>
         </div>
 
@@ -324,26 +308,20 @@
           <div class="row">
             <div class="led" aria-hidden="true"></div>
             <span class="badge mono"
-              >status:
-              <strong style="color: var(--text); margin-left: 6px"
-                >404</strong
-              ></span
+              >status: <strong style="color: var(--text); margin-left: 6px">404</strong></span
             >
           </div>
 
           <h1>Page not found</h1>
           <p>
-            We couldn’t locate the page you asked for. It may have been moved,
-            renamed, or removed.
+            We couldn’t locate the page you asked for. It may have been moved, renamed, or removed.
           </p>
 
           <div class="code mono" id="path"></div>
 
           <div class="grid">
             <div class="row small">
-              <span
-                >Try returning to the homepage or report a broken link.</span
-              >
+              <span>Try returning to the homepage or report a broken link.</span>
             </div>
             <div class="center">
               <a class="btn btn-ghost" id="copy">Copy path</a>
@@ -371,9 +349,7 @@
 
           <div class="footer">
             <span class="mono small">➜</span>
-            <span class="small"
-              >Tip: bookmark the homepage for quick access.</span
-            >
+            <span class="small">Tip: bookmark the homepage for quick access.</span>
           </div>
         </div>
 
@@ -480,13 +456,8 @@
         }
 
         try {
-          const dark = window.matchMedia(
-            "(prefers-color-scheme: dark)",
-          ).matches;
-          document.documentElement.setAttribute(
-            "data-theme",
-            dark ? "dark" : "light",
-          );
+          const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
         } catch {}
       })();
     </script>

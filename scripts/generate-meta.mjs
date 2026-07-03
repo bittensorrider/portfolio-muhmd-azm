@@ -102,9 +102,7 @@ const normalizeBase = (b) => {
 const basePath = normalizeBase(basePathRaw);
 
 const siteUrl = String(seo.siteUrl || "").replace(/\/$/, "");
-const canonicalBase = siteUrl
-  ? new URL(basePath, siteUrl).toString()
-  : basePath;
+const canonicalBase = siteUrl ? new URL(basePath, siteUrl).toString() : basePath;
 
 /* ========== FEED + SITEMAP + ROBOTS ========== */
 {
@@ -126,7 +124,7 @@ ${urls
     ${u.lastmod ? `<lastmod>${x(u.lastmod)}</lastmod>` : ""}
     ${u.changefreq ? `<changefreq>${x(u.changefreq)}</changefreq>` : ""}
     ${u.priority ? `<priority>${x(u.priority)}</priority>` : ""}
-  </url>`,
+  </url>`
   )
   .join("\n")}
 </urlset>`;
@@ -134,10 +132,7 @@ ${urls
 
   const blog = data?.blog || {};
   const siteTitle = seo.title || data?.personal?.name || "Portfolio";
-  const siteDesc =
-    seo.description ||
-    data?.personal?.tagline ||
-    "A fast, modern, tech portfolio.";
+  const siteDesc = seo.description || data?.personal?.tagline || "A fast, modern, tech portfolio.";
   const ogImage = seo.image
     ? absUrl(canonicalBase, seo.image)
     : absUrl(canonicalBase, "/assets/images/og-image.png");
@@ -153,8 +148,7 @@ ${urls
       const title = p.title || p.name || "Untitled";
       const pathLike = p.url || p.link || p.slug || p.path || "";
       const link = pathLike ? absUrl(canonicalBase, pathLike) : canonicalBase;
-      const dateRaw =
-        p.date || p.publishedAt || p.pubDate || p.createdAt || null;
+      const dateRaw = p.date || p.publishedAt || p.pubDate || p.createdAt || null;
       const desc = p.excerpt || p.description || "";
       const pubDate = dateRaw ? new Date(dateRaw) : new Date();
       return {
@@ -165,9 +159,7 @@ ${urls
         description: desc,
       };
     })
-    .sort(
-      (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
-    );
+    .sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
 
   const rssLang = (seo.locale || "en_US").split("_")[0];
 
@@ -196,7 +188,7 @@ ${items
           ? `<description><![CDATA[${String(it.description).slice(0, 2000)}]]></description>`
           : ""
       }
-    </item>`,
+    </item>`
   )
   .join("\n")}
   </channel>
@@ -213,7 +205,7 @@ Sitemap: ${absUrl(canonicalBase, "/sitemap.xml")}
   console.log("✓ sitemap.xml, feed.xml, robots.txt");
   if (!siteUrl) {
     console.warn(
-      "⚠️  seo.siteUrl kosong. Isi URL absolut domain produksi agar canonical/RSS/robots akurat.",
+      "⚠️  seo.siteUrl kosong. Isi URL absolut domain produksi agar canonical/RSS/robots akurat."
     );
   }
 }
@@ -221,10 +213,7 @@ Sitemap: ${absUrl(canonicalBase, "/sitemap.xml")}
 /* ========== HEAD SEO Injection ========== */
 const p = data?.personal || {};
 const title = seo.title || p.name || "Portfolio";
-const desc =
-  seo.description ||
-  p.tagline ||
-  "A fast, modern, programmer-themed portfolio.";
+const desc = seo.description || p.tagline || "A fast, modern, programmer-themed portfolio.";
 const siteName = seo.siteName || p.name || "Portfolio";
 const appName = seo.appName || siteName;
 const generator = seo.generator || "Vite + React";
@@ -233,10 +222,7 @@ const keywords = (seo.keywords || []).join(", ");
 let twitter = (seo.twitter || "").trim();
 if (twitter && !twitter.startsWith("@")) twitter = `@${twitter}`;
 const twitterId = (seo.twitterId || "").trim();
-const imageAbs = absUrl(
-  canonicalBase,
-  seo.image || "/assets/images/og-image.png",
-);
+const imageAbs = absUrl(canonicalBase, seo.image || "/assets/images/og-image.png");
 const imageW = seo.imageWidth ?? 1200;
 const imageH = seo.imageHeight ?? 630;
 
@@ -299,17 +285,13 @@ const webpageLD = {
   isPartOf: { "@type": "WebSite", url: canonical, name: siteName },
   description: desc,
   inLanguage: (seo.locale || "en_US").split("_")[0],
-  dateModified: seo.updatedAt
-    ? new Date(seo.updatedAt).toISOString()
-    : undefined,
+  dateModified: seo.updatedAt ? new Date(seo.updatedAt).toISOString() : undefined,
 };
 const crumbs = [
   { name: "Home", href: basePath },
   ...(data?.about?.enabled ? [{ name: "About", href: "#about" }] : []),
   ...(data?.projects ? [{ name: "Projects", href: "#projects" }] : []),
-  ...(data?.portfolio?.enabled
-    ? [{ name: "Portfolio", href: "#portfolio" }]
-    : []),
+  ...(data?.portfolio?.enabled ? [{ name: "Portfolio", href: "#portfolio" }] : []),
   ...(data?.contact ? [{ name: "Contact", href: "#contact" }] : []),
 ];
 const breadcrumbLD = {
@@ -328,9 +310,7 @@ const orgLD = seo.organization?.name
       name: seo.organization.name,
       legalName: seo.organization.legalName || undefined,
       url: seo.organization.url || canonical,
-      logo: seo.organization.logo
-        ? absUrl(canonicalBase, seo.organization.logo)
-        : undefined,
+      logo: seo.organization.logo ? absUrl(canonicalBase, seo.organization.logo) : undefined,
       sameAs: seo.organization.sameAs || undefined,
     }
   : null;
@@ -345,20 +325,16 @@ const headFrag = [
   tag("meta", {
     name: "robots",
     content:
-      seo.robots ||
-      "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      seo.robots || "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   }),
   tag("meta", {
     name: "googlebot",
     content:
-      seo.robots ||
-      "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      seo.robots || "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   }),
   tag("meta", { name: "application-name", content: appName }),
   tag("meta", { name: "generator", content: generator }),
-  seo.notranslate
-    ? tag("meta", { name: "google", content: "notranslate" })
-    : "",
+  seo.notranslate ? tag("meta", { name: "google", content: "notranslate" }) : "",
   tag("link", { rel: "canonical", href: canonical }),
   tag("link", { rel: "sitemap", href: sitemapHref }),
   tag("meta", {
@@ -407,23 +383,15 @@ const headFrag = [
         content: new Date(seo.updatedAt).toISOString(),
       })
     : "",
-  ...(seo.seeAlso || []).map((u) =>
-    tag("meta", { property: "og:see_also", content: u }),
-  ),
+  ...(seo.seeAlso || []).map((u) => tag("meta", { property: "og:see_also", content: u })),
   ...(localeAlternates || []).map((loc) =>
-    tag("meta", { property: "og:locale:alternate", content: loc }),
+    tag("meta", { property: "og:locale:alternate", content: loc })
   ),
-  seo.facebookAppId
-    ? tag("meta", { property: "fb:app_id", content: seo.facebookAppId })
-    : "",
-  seo.fbPageId
-    ? tag("meta", { property: "fb:pages", content: seo.fbPageId })
-    : "",
-  ...(seo.facebookAdmins || []).map((id) =>
-    tag("meta", { property: "fb:admins", content: id }),
-  ),
+  seo.facebookAppId ? tag("meta", { property: "fb:app_id", content: seo.facebookAppId }) : "",
+  seo.fbPageId ? tag("meta", { property: "fb:pages", content: seo.fbPageId }) : "",
+  ...(seo.facebookAdmins || []).map((id) => tag("meta", { property: "fb:admins", content: id })),
   ...(seo.articleTags || []).map((tagName) =>
-    tag("meta", { property: "article:tag", content: tagName }),
+    tag("meta", { property: "article:tag", content: tagName })
   ),
   tag("meta", { name: "twitter:card", content: "summary_large_image" }),
   tag("meta", { name: "twitter:title", content: title }),
@@ -432,9 +400,7 @@ const headFrag = [
   twitter ? tag("meta", { name: "twitter:site", content: twitter }) : "",
   twitter ? tag("meta", { name: "twitter:creator", content: twitter }) : "",
   twitterId ? tag("meta", { name: "twitter:site:id", content: twitterId }) : "",
-  twitterId
-    ? tag("meta", { name: "twitter:creator:id", content: twitterId })
-    : "",
+  twitterId ? tag("meta", { name: "twitter:creator:id", content: twitterId }) : "",
   tag("meta", {
     name: "twitter:domain",
     content: (() => {
@@ -458,7 +424,7 @@ const headFrag = [
       rel: "alternate",
       href: absUrl(canonicalBase, href),
       hreflang: lang,
-    }),
+    })
   ),
   tag("link", { rel: "alternate", href: canonical, hreflang: "x-default" }),
   ...Array.from(preconnectHosts)
@@ -474,9 +440,7 @@ const headFrag = [
   `<script type="application/ld+json" id="ld-website">${JSON.stringify(websiteLD)}</script>`,
   `<script type="application/ld+json" id="ld-webpage">${JSON.stringify(webpageLD)}</script>`,
   `<script type="application/ld+json" id="ld-breadcrumb">${JSON.stringify(breadcrumbLD)}</script>`,
-  orgLD
-    ? `<script type="application/ld+json" id="ld-org">${JSON.stringify(orgLD)}</script>`
-    : "",
+  orgLD ? `<script type="application/ld+json" id="ld-org">${JSON.stringify(orgLD)}</script>` : "",
   HEAD_END,
 ]
   .flat()
@@ -485,10 +449,7 @@ const headFrag = [
 
 /* ========== PWA Manifest (auto-generate / merge) ========== */
 {
-  const manifestWeb = (seo.manifest || "/site.webmanifest").replace(
-    /^\/+/,
-    "/",
-  );
+  const manifestWeb = (seo.manifest || "/site.webmanifest").replace(/^\/+/, "/");
   const manifestDistPath = path.join(outDir, manifestWeb.replace(/^\/+/, ""));
   ensureDir(path.dirname(manifestDistPath));
 
@@ -514,7 +475,7 @@ const headFrag = [
         "/assets/images/apple-touch-icon.png",
         "/assets/images/apple-touch-icon.png",
       ],
-      { dist: outDir, pub: "public" },
+      { dist: outDir, pub: "public" }
     ) || "/assets/images/apple-touch-icon.png";
 
   const icon512 =
@@ -524,7 +485,7 @@ const headFrag = [
         "/assets/images/android-chrome-512x512.png",
         "/assets/images/icon-512.png",
       ],
-      { dist: outDir, pub: "public" },
+      { dist: outDir, pub: "public" }
     ) || "/assets/images/web-app-manifest-512x512.png";
 
   const manifest = {
@@ -537,12 +498,9 @@ const headFrag = [
     scope: baseManifest.scope || basePath,
     id: baseManifest.id || basePath,
     theme_color: baseManifest.theme_color || seo.themeColorLight || "#ffffff",
-    background_color:
-      baseManifest.background_color || seo.themeColorLight || "#ffffff",
+    background_color: baseManifest.background_color || seo.themeColorLight || "#ffffff",
     icons:
-      baseManifest.icons &&
-      Array.isArray(baseManifest.icons) &&
-      baseManifest.icons.length
+      baseManifest.icons && Array.isArray(baseManifest.icons) && baseManifest.icons.length
         ? baseManifest.icons
         : [
             {
@@ -560,11 +518,7 @@ const headFrag = [
           ],
   };
 
-  await fsp.writeFile(
-    manifestDistPath,
-    JSON.stringify(manifest, null, 2) + "\n",
-    "utf8",
-  );
+  await fsp.writeFile(manifestDistPath, JSON.stringify(manifest, null, 2) + "\n", "utf8");
   console.log(`✓ site.webmanifest generated at ${manifestWeb}`);
 }
 
@@ -577,7 +531,7 @@ for (const file of targets) {
   let html = await fsp.readFile(file, "utf8");
   html = html.replace(
     /<html(?![^>]*\blang=)/i,
-    `<html lang="${(seo.locale || "en_US").split("_")[0] || "en"}"`,
+    `<html lang="${(seo.locale || "en_US").split("_")[0] || "en"}"`
   );
   if (/<title>.*?<\/title>/i.test(html)) {
     html = html.replace(/<title>.*?<\/title>/i, `<title>${title}</title>`);

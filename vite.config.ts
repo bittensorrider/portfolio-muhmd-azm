@@ -4,8 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, ".", "");
-  const raw =
-    env.BASE_PATH ?? (globalThis as any)?.process?.env?.BASE_PATH ?? "/";
+  const raw = env.BASE_PATH ?? (globalThis as any)?.process?.env?.BASE_PATH ?? "/";
 
   const base = (() => {
     let b = String(raw || "/").trim();
