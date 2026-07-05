@@ -49,7 +49,7 @@
       "lines": [
         "whoami",
         "mohd_azmi",
-        "curl https://mohdazmi.is-a.dev > profile.txt",
+        "curl https://muhammad-azamuddin.com/ > profile.txt",
         "cat profile.txt | grep 'Software Engineer' || echo \"(Sites says I’m awesome anyway)\"",
         "echo \"Portfolio loaded. Ready to explore?\""
       ],
@@ -355,11 +355,11 @@
     "contact_me": {
       "address": "Penang, Malaysia",
       "email": "openhope.kl@gmail.com",
-      "website": "mohdazmi.is-a.dev"
+      "website": "muhammad-azamuddin.com"
     }
   },
   "seo": {
-    "siteUrl": "https://mohdazmi.is-a.dev",
+    "siteUrl": "https://muhammad-azamuddin.com/",
     "basePath": "/",
     "title": "Muhammad Azamuddin — Software Engineer Portfolio",
     "description": "Fast, modern, programmer-themed portfolio by Muhammad Azamuddin.",
@@ -413,7 +413,7 @@
     "organization": {
       "name": "Muhammad Azamuddin",
       "legalName": "Muhammad Azamuddin",
-      "url": "https://mohdazmi.is-a.dev",
+      "url": "https://muhammad-azamuddin.com/",
       "logo": "./assets/images/apple-touch-icon.png",
       "sameAs": ["https://github.com/codemaster525640"]
     }
