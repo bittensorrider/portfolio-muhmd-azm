@@ -73,8 +73,8 @@ function findStaticWebPath(candidates, { dist = "dist", pub = "public" } = {}) {
 /* ========== Load data.json ========== */
 const findDataJson = () => {
   const candidates = [
-    "public/data/data.json",
     "src/data/data.json",
+    "public/data/data.json",
     "data/data.json",
     "dist/data/data.json",
   ];

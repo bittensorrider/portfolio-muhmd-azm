@@ -7,8 +7,8 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && node scripts/generate-meta.mjs && javascript-obfuscator dist --output dist --config obf.config.json",
+    "dev": "node scripts/sync-data.mjs && vite",
+    "build": "node scripts/sync-data.mjs && vite build && node scripts/generate-meta.mjs && javascript-obfuscator dist --output dist --config obf.config.json",
     "preview": "vite preview --port 5173",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "format": "prettier -w .",
