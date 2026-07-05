@@ -180,10 +180,9 @@ function pickIcon(key: string): React.ReactElement {
   return ICON[normalized];
 }
 
-export const Footer: React.FC<{ socials?: SocialsInput; name?: string; studioTag?: string }> = ({
+export const Footer: React.FC<{ socials?: SocialsInput; name?: string }> = ({
   socials,
   name,
-  studioTag = "TY Studio DEV",
 }) => {
   const pairs = Object.entries(socials || {}).filter(
     ([k, v]) => k !== "custom" && typeof v === "string" && !!v
@@ -249,17 +248,10 @@ export const Footer: React.FC<{ socials?: SocialsInput; name?: string; studioTag
 
           <div aria-hidden="true" className="ft-divider mx-auto my-6 h-px max-w-3xl" />
 
-          <div className="mx-auto flex max-w-3xl flex-col items-center justify-between gap-3 sm:flex-row">
+          <div className="mx-auto max-w-3xl text-center sm:text-left">
             <p className="text-muted">
               Copyright © {year} {displayName}. All rights reserved.
             </p>
-            <div className="flex items-center gap-3">
-              <span className="text-xs text-muted">Built with ❤️</span>
-              <span className="inline-flex items-center gap-1 rounded-lg border border-subtle bg-(--bg)/55 px-2 py-1 text-xs">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-(--accent) animate-pulse" />
-                <span className="text-muted">{studioTag}</span>
-              </span>
-            </div>
           </div>
         </div>
       </div>
