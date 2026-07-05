@@ -85,7 +85,7 @@ export const TerminalTyper: React.FC<Props> = (props) => {
         <span className="h-3 w-3 rounded-full bg-red-500/80" />
         <span className="h-3 w-3 rounded-full bg-yellow-500/80" />
         <span className="h-3 w-3 rounded-full bg-green-500/80" />
-        <span className="ml-3 text-xs text-muted">root@tri-yatna</span>
+        <span className="ml-3 text-xs text-muted">root@mohd-azmi</span>
       </div>
 
       <div
@@ -95,7 +95,7 @@ export const TerminalTyper: React.FC<Props> = (props) => {
       >
         {output.map((l, idx) => (
           <div key={idx} className="whitespace-pre-wrap">
-            <span className="accent">root@tri-yatna:~#</span> {l}
+            <span className="accent">root@mohd-azmi:~#</span> {l}
             {cursor && idx === output.length - 1 && <span className="animate-pulse">▋</span>}
           </div>
         ))}

@@ -7,9 +7,9 @@
     "location": "Malaysia",
     "email": "openhope.kl@gmail.com",
     "logo_path": "./assets/images/apple-touch-icon.png",
-    "cvUrl": "",
+    "cvUrl": "./pdf/MOHD_AZMI.pdf",
     "socials": {
-      "github": "https://github.com/triyatna",
+      "github": "https://github.com/codemaster525640",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/azamuddin-azmi-1ab695416",
       "instagram": "",
@@ -48,9 +48,9 @@
     "terminal": {
       "lines": [
         "whoami",
-        "tri_yatna",
-        "curl https://triyatna.is-a.dev > profile.txt",
-        "cat profile.txt | grep 'Web Developer' || echo \"(Sites says I’m awesome anyway)\"",
+        "mohd_azmi",
+        "curl https://mohdazmi.is-a.dev > profile.txt",
+        "cat profile.txt | grep 'Software Engineer' || echo \"(Sites says I’m awesome anyway)\"",
         "echo \"Portfolio loaded. Ready to explore?\""
       ],
       "typeSpeedMs": 140,
@@ -62,17 +62,17 @@
   },
   "about": {
     "enabled": true,
-    "markdown": "Hello! I'm Tri Yatna, a passionate web developer from Indonesia 🇮🇩.\nI have experience as a website developer and cloud engineer, specializing in building fast, scalable, and secure web applications.\n\nI enjoy working with PHP (Laravel), Node.js, and modern front-end tools like React and TailwindCSS.\nIn the cloud world, I love optimizing servers with Caddy, Docker, and Cloudflare — making deployments smooth and reliable.\n\nBeyond code, I’m obsessed with automation, AI integration, and crafting systems that make life easier for both developers and users.\n\nWhen I’m not coding, you’ll find me experimenting with new tech stacks, tuning performance, or helping others bring their ideas online."
+    "markdown": "Hello! I'm Muhammad Azamuddin, a passionate software developer from Malaysia 🇲🇾.\nI have experience as a website developer and cloud engineer, specializing in building fast, scalable, and secure web applications.\n\nI enjoy working with PHP (Laravel), Node.js, Python (FastAPI), and modern front-end tools like React and TailwindCSS.\nIn the cloud world, I love optimizing servers with AWS, Docker, and Cloudflare — making deployments smooth and reliable.\n\nBeyond code, I’m obsessed with automation, AI integration, and crafting systems that make life easier for both developers and users.\n\nWhen I’m not coding, you’ll find me experimenting with new tech stacks, tuning performance, or helping others bring their ideas online."
   },
 
   "resume": {
     "enabled": true,
     "education": [
       {
-        "title": "Bachelor's Degree in Management",
-        "org": "Widyatama University",
-        "period": "2020 - 2024",
-        "details": "Graduated with honors, with a focus on human resource development. Relevant coursework included project management, organizational behavior, and business strategy."
+        "title": "Bachelor's Degree in Computer Science / Software Engineering",
+        "org": "Universiti Sains Malaysia",
+        "period": "2014 - 2018",
+        "details": "Graduated in 2018 with a Bachelor's in Computer Science / Software Engineering. Built a strong foundation in programming, software design, data structures, algorithms, databases, and systems development that supports work in backend engineering, cloud platforms, and production AI applications."
       }
     ],
     "experience": [
