@@ -98,9 +98,10 @@ export const About: React.FC<{ markdown: string }> = ({ markdown }) => {
 
         .about .typography {
           color: var(--text);
-          font-size: 13px;
-          line-height: 1.75;
-          font-family: "Caveat", cursive;
+          font-size: 1rem;
+          line-height: 1.8;
+          font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+          letter-spacing: 0.01em;
         }
 
         .about .typography h1,
@@ -179,10 +180,10 @@ export const About: React.FC<{ markdown: string }> = ({ markdown }) => {
         }
 
         @media (min-width: 640px) {
-          .about .typography { font-size: 1.05rem; line-height: 1.85; }
+          .about .typography { font-size: 1.0625rem; line-height: 1.85; }
         }
         @media (min-width: 1024px) {
-          .about .typography { font-size: 1.08rem; }
+          .about .typography { font-size: 1.125rem; }
         }
       `}</style>
     </div>

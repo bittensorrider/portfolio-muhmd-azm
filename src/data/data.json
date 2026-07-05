@@ -62,7 +62,7 @@
   },
   "about": {
     "enabled": true,
-    "markdown": "Hello! I'm Muhammad Azamuddin, a passionate software developer from Malaysia 🇲🇾.\nI have experience as a website developer and cloud engineer, specializing in building fast, scalable, and secure web applications.\n\nI enjoy working with PHP (Laravel), Node.js, Python (FastAPI), and modern front-end tools like React and TailwindCSS.\nIn the cloud world, I love optimizing servers with AWS, Docker, and Cloudflare — making deployments smooth and reliable.\n\nBeyond code, I’m obsessed with automation, AI integration, and crafting systems that make life easier for both developers and users.\n\nWhen I’m not coding, you’ll find me experimenting with new tech stacks, tuning performance, or helping others bring their ideas online."
+    "markdown": "Hello! I'm Muhammad Azamuddin, a Senior Software Engineer based in Penang, Malaysia 🇲🇾.\n\nWith over 8 years of experience, I build scalable backend systems, cloud-native platforms, and production AI applications. I specialize in Python, Node.js, FastAPI, React, AWS, Kubernetes, LLMs, RAG, and distributed systems.\n\nMy recent work includes architecting backend services for AI content detection at It's AI, processing over 2 million requests per month, and building production ML pipelines with PyTorch and Hugging Face Transformers. At b2wise, I designed microservices serving 500,000 daily API requests and engineered RAG-based AI chatbots with LangChain and vector databases.\n\nI'm passionate about delivering high-availability APIs, AI-powered products, and automated CI/CD pipelines. I hold certifications in AWS Cloud Practitioner and IBM AI Engineering."
   },
 
   "resume": {
@@ -174,10 +174,6 @@
       {
         "label": "Perl",
         "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/perl/perl-original.svg"
-      },
-      {
-        "label": "Windows Terminal",
-        "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"
       },
       {
         "label": "TypeScript",
