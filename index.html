@@ -1,10 +1,18 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#0D1117" />
     <title>Loading…</title>
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme = saved === "light" || saved === "dark" ? saved : "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+        document.documentElement.classList.toggle("dark", theme === "dark");
+      })();
+    </script>
 
     <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png" />
