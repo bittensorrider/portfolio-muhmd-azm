@@ -77,45 +77,63 @@
     ],
     "experience": [
       {
-        "title": "Founder & Web Developer",
-        "org": "TY Studio DEV",
-        "period": "2020 - Present",
-        "details": "Founded an agency specializing in full-stack website development, and established several businesses under TY Studio DEV, such as Detopupin, Destorein, and DeManage CRM. Managed client projects from conception to implementation."
+        "title": "Senior Software Engineer",
+        "org": "It's AI (ITSAI Technologies – FZCO), Delaware, US",
+        "period": "Feb 2025 - May 2026",
+        "details": "Architected scalable backend services for AI content detection across web apps, APIs, and browser extensions, processing over 2 million requests per month while reducing API response time by 35%. Developed production ML pipelines with PyTorch and Hugging Face Transformers, cutting model deployment time from 3 days to 4 hours and improving inference accuracy by 12%. Fine-tuned BERT and RoBERTa models to improve F1 score by 99.3%, reduced inference latency by 40% through async processing and batching, and implemented Docker, Kubernetes, Helm, GitHub Actions, and AWS pipelines that reduced release time by 60%."
+      },
+      {
+        "title": "Senior Software Engineer & AI Engineer",
+        "org": "b2wise Company, Birmingham, United Kingdom",
+        "period": "Feb 2020 - Jan 2025",
+        "details": "Designed backend microservices with Node.js and Python serving 500,000 daily API requests. Developed 30+ production REST APIs and optimized PostgreSQL/MongoDB performance. Engineered RAG-based AI chatbots using LangChain, OpenAI APIs, and vector databases, improving answer accuracy by 28% and reducing support tickets by 40%. Implemented OAuth 2.0 authentication, JWT authorization, WebSocket communication, and enterprise CI/CD pipelines."
+      },
+      {
+        "title": "Frontend Developer & User Management",
+        "org": "Adin Company, Oslo, Norway",
+        "period": "Mar 2019 - Jan 2020",
+        "details": "Optimized frontend performance and user management workflows, reducing page load time from 3.8s to 1.5s."
       }
     ],
     "skills": [
-      "PHP",
-      "Laravel",
-      "CodeIgniter",
+      "Python",
       "JavaScript",
       "TypeScript",
+      "Go",
+      "Java",
+      "PHP",
+      "Rust",
+      "C#",
+      "Kotlin",
       "React",
-      "Tailwind CSS",
-      "HTML",
-      "CSS",
-      "Git",
-      "Vite",
+      "Next.js",
+      "Vue.js",
+      "Angular",
       "Node.js",
-      "Python",
+      "FastAPI",
+      "NestJS",
+      "Express",
+      "Django",
+      "Flask",
+      "PyTorch",
+      "Hugging Face Transformers",
+      "LangChain",
+      "RAG",
+      "Vector Databases",
+      "Prompt Engineering",
+      "AWS",
+      "Azure",
+      "GCP",
+      "Docker",
+      "Kubernetes",
+      "Helm",
+      "GitHub Actions",
+      "PostgreSQL",
       "MySQL",
       "MongoDB",
-      "N8N",
-      "Microsoft Excel",
-      "Google Sheets",
-      "Microsoft Word",
-      "Microsoft PowerPoint",
-      "Microsoft Access",
-      "Google Docs",
-      "Google Slides",
-      "Google Forms",
-      "ATS Software",
-      "CRM Software",
-      "HRIS Software",
-      "CMS",
-      "Project Management",
-      "Team Leadership",
-      "Problem-Solving",
-      "Wordpress"
+      "Redis",
+      "Pinecone",
+      "Weaviate"
     ]
   },
   "techStack": {
@@ -306,55 +324,18 @@
   "projects": {
     "github": {
       "enabled": true,
-      "user": "triyatna",
+      "user": "codemaster525640",
       "max": 9,
       "filter": {
         "excludeForks": true,
         "topicsIncludeAny": []
       }
     },
-    "custom": [
-      {
-        "icon": "./assets/images/favicon.svg",
-        "name": "Personal Portfolio",
-        "description": "My personal portfolio website built with React and Tailwind CSS.",
-        "link": "https://triyatna.is-a.dev"
-      },
-      {
-        "icon": "https://pkmsentra.org/wp-content/uploads/2023/02/Logo1.png",
-        "name": "PKM sEntra",
-        "description": "A student press media website \"sEntra\" at Widyatama University built using WordPress.",
-        "link": "https://pkmsentra.org"
-      },
-      {
-        "icon": "https://tylabs.tech/build/images/logo.png",
-        "name": "Detopupin",
-        "description": "A digital product selling website built with Laravel, Vue and Tailwind CSS.",
-        "link": "https://detopupin.com"
-      },
-      {
-        "icon": "https://aingdb.is-a.dev/logo-title.png",
-        "name": "AingDB",
-        "description": "AingDB is a free and open source database management system built with TypeScript and running on the NodeJS engine.",
-        "link": "https://aingdb.is-a.dev"
-      },
-      {
-        "icon": "https://raw.githubusercontent.com/triyatna/n8n-nodes-4discord/refs/heads/main/icons/discord.svg",
-        "name": "n8n-nodes-4discord",
-        "description": "An n8n community node package to integrate with Discord WSS & API.",
-        "link": "https://www.npmjs.com/package/@triyatna/n8n-nodes-4discord"
-      },
-      {
-        "icon": "https://raw.githubusercontent.com/triyatna/warest-whatsapp-web-multi/refs/heads/assets/warest(1).png",
-        "name": "WARest - Whatsapp Web Multi Sessions Unofficial REST API",
-        "description": "An unofficial REST API for WhatsApp Web Multi Sessions built with TypeScript and Express.js.",
-        "link": "https://github.com/triyatna/warest-whatsapp-web-multi"
-      }
-    ]
+    "custom": []
   },
   "blog": {
-    "enabled": true,
-    "rssJson": "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@triyatna",
+    "enabled": false,
+    "rssJson": "",
     "max": 6
   },
   "portfolio": {
@@ -363,8 +344,8 @@
       {
         "icon": "https://upload.wikimedia.org/wikipedia/commons/3/33/Vanamo_Logo.png",
         "name": "Personal Portfolio",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "link": "https://triyatna.is-a.dev"
+        "description": "",
+        "link": ""
       }
     ]
   },
@@ -372,32 +353,25 @@
     "enabled": true,
     "form": {
       "mode": "mailto",
-      "to": "Triyatna.dev@gmail.com",
+      "to": "openhope.kl@gmail.com",
       "formspreeId": ""
     },
     "contact_me": {
-      "address": "Karawang,Indonesia",
-      "email": "triyatna.dev@gmail.com",
-      "website": "triyatna.is-a.dev"
+      "address": "Penang, Malaysia",
+      "email": "openhope.kl@gmail.com",
+      "website": "mohdazmi.is-a.dev"
     }
   },
   "seo": {
-    "siteUrl": "https://triyatna.is-a.dev",
+    "siteUrl": "https://mohdazmi.is-a.dev",
     "basePath": "/",
-    "title": "Tri Yatna — Web Developer Portfolio",
-    "description": "Fast, modern, programmer-themed portfolio by Tri Yatna.",
-    "keywords": [
-      "portfolio",
-      "web portfolio",
-      "tri yatna",
-      "triyatna",
-      "tri",
-      "triyatna portfolio"
-    ],
+    "title": "Muhammad Azamuddin — Software Engineer Portfolio",
+    "description": "Fast, modern, programmer-themed portfolio by Muhammad Azamuddin.",
+    "keywords": ["portfolio", "web portfolio", "muhammad azamuddin"],
     "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     "locale": "en_US",
-    "siteName": "Tri Yatna",
-    "appName": "Tri Yatna",
+    "siteName": "Muhammad Azamuddin",
+    "appName": "Muhammad Azamuddin",
     "generator": "Vite + React",
     "notranslate": false,
 
@@ -405,7 +379,7 @@
     "imageWidth": 1200,
     "imageHeight": 630,
 
-    "twitter": "@triyatna",
+    "twitter": "",
     "twitterId": "",
 
     "facebookAppId": "",
@@ -436,16 +410,16 @@
     "bingSiteVerification": "",
     "yandexSiteVerification": "",
 
-    "seeAlso": ["https://github.com/triyatna"],
+    "seeAlso": ["https://github.com/codemaster525640"],
     "articleTags": ["web", "portfolio", "react"],
-    "updatedAt": "2025-01-01T00:00:00.000Z",
+    "updatedAt": "2026-07-05T00:00:00.000Z",
 
     "organization": {
-      "name": "Tri Yatna Studio",
-      "legalName": "Tri Yatna Studio",
-      "url": "https://triyatna.is-a.dev",
+      "name": "Muhammad Azamuddin",
+      "legalName": "Muhammad Azamuddin",
+      "url": "https://mohdazmi.is-a.dev",
       "logo": "./assets/images/apple-touch-icon.png",
-      "sameAs": ["https://github.com/triyatna"]
+      "sameAs": ["https://github.com/codemaster525640"]
     }
   }
 }
